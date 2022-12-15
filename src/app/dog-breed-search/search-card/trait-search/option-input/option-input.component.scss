@@ -1,0 +1,30 @@
+.option-input-container {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .input-heading {
+        margin: 0;
+    }
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+    .option-buttons {
+        display: flex;
+        gap: 3px;
+        button {
+            height: 25px;
+            width: 25px;
+            border-color: transparent;
+            border-radius: 50px;
+        }
+        .selected {
+            background-color: #72AE1C;
+            color: white;
+        }
+    }
+}

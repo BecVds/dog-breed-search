@@ -1,0 +1,13 @@
+.trait-search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .range-inputs {
+        width: 100%;
+    }
+    .options-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
