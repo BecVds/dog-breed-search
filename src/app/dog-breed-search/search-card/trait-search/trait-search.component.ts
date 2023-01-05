@@ -12,4 +12,10 @@ export class TraitSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  testFunction(option: string){
+    console.log(option)
+  }
+
+
+
 }

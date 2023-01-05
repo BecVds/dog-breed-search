@@ -2,20 +2,15 @@
     <div class="top">
         <div class="search-option-container">
             <h2>Search options</h2>
-            <div class="search-options">
-                <div class="search-option">
-                    <div class="radio-button"></div>
-                    <div>Breed Name</div>
-                </div>
-                <div class="search-option">
-                    <div class="radio-button"></div>
-                    <div>Trait</div>
-                </div>
-            </div>
+            <mat-radio-group aria-labelledby="Select an option"
+            [(ngModel)]="searchOption">
+              <mat-radio-button value="name">Breed Name</mat-radio-button>
+              <mat-radio-button value="trait">Trait</mat-radio-button>
+            </mat-radio-group>
             <p class="option-description">Search for a dog breed to display information on it.</p>
         </div>
-        <app-name-search></app-name-search>
-        <app-trait-search></app-trait-search>
+        <app-name-search *ngIf="searchOption === 'name'"></app-name-search>
+        <app-trait-search *ngIf="searchOption === 'trait'"></app-trait-search>
     </div>
     <div class="bottom">
         <button>Search</button>

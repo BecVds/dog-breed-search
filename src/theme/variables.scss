@@ -1,0 +1,111 @@
+/*
+  To generate new color palettes visit http://mcg.mbitson.com/
+*/
+
+// Change custom font here
+$theme-font: 'Roboto, Arial, sans-serif';
+
+// Update primary color palette here.
+/* For use in src/lib/core/theming/_palette.scss */
+$theme-primary-color: (
+    50 : #eef5e4,
+    100 : #d5e7bb,
+    200 : #b9d78e,
+    300 : #9cc660,
+    400 : #87ba3e,
+    500 : #72ae1c,
+    600 : #6aa719,
+    700 : #5f9d14,
+    800 : #559411,
+    900 : #428409,
+    A100 : #d2ffb3,
+    A200 : #b4ff80,
+    A400 : #96ff4d,
+    A700 : #87ff34,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+// Update secondary color palette here.
+$theme-accent-color: (
+  50 : #eef5e4,
+  100 : #d5e7bb,
+  200 : #b9d78e,
+  300 : #9cc660,
+  400 : #87ba3e,
+  500 : #72ae1c,
+  600 : #6aa719,
+  700 : #5f9d14,
+  800 : #559411,
+  900 : #428409,
+  A100 : #d2ffb3,
+  A200 : #b4ff80,
+  A400 : #96ff4d,
+  A700 : #87ff34,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+/*
+  Everything in root doesn't need to be changed as it would automatically
+  get updated. Additional variables can be added.
+*/
+
+:root{
+  // Primary
+  --eps-primary-color: #{map-get($theme-primary-color, 500)};
+  --eps-primary-color-contrast: #{map-get( map-get($theme-primary-color, contrast), 500 )};
+  // Primary shade
+  --eps-primary-color-shade: #{map-get($theme-primary-color, 800)};
+  --eps-primary-color-shade-contrast: #{map-get( map-get($theme-primary-color, contrast), 800 )};
+  // Primary tint
+  --eps-primary-color-tint: #{map-get($theme-primary-color, 200)};
+  --eps-primary-color-tint-contrast: #{map-get( map-get($theme-primary-color, contrast), 200 )};
+
+  // Secondary
+  --eps-secondary-color: #{map-get($theme-accent-color , 500)};
+  --eps-secondary-color-contrast: #{map-get( map-get($theme-accent-color, contrast), 500 )};
+  // Secondary shade
+  --eps-secondary-color-shade: #{map-get($theme-accent-color, 800)};
+  --eps-secondary-color-shade-contrast: #{map-get( map-get($theme-accent-color, contrast), 800 )};
+  // Secondary tint
+  --eps-secondary-color-tint: #{map-get($theme-accent-color, 200)};
+  --eps-secondary-color-tint-contrast: #{map-get( map-get($theme-accent-color, contrast), 200 )};
+
+
+  --eps-dark-color: #2C2C2C;
+  --eps-dark-color-contrast: #f3f3f3;
+
+  --header-height: 70px;
+  --side-menu-width: 250px;
+}

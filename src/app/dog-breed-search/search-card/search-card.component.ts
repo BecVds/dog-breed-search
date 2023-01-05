@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCardComponent implements OnInit {
 
+  searchOption = 'trait'
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,12 +1,12 @@
 <div class="option-input-container">
-    <h4 class="input-heading">Place-Heading</h4>
-    <p>0 indicating no shedding and 
-        5 indicates maximum shedding</p>
+    <h4 class="input-heading">{{criteria}}</h4>
+    <p>0 indicating no {{criteria}} and
+        5 indicates maximum {{criteria}}</p>
     <div class="option-buttons">
-        <button>1</button>
-        <button class="selected">2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
+        <button [ngClass]="selectedOption === '1' ? 'selected': ''" (click)="onOptionSelect('1')">1</button>
+        <button [ngClass]="selectedOption === '2' ? 'selected': ''"  (click)="onOptionSelect('2')">2</button>
+        <button [ngClass]="selectedOption === '3' ? 'selected': ''" (click)="onOptionSelect('3')">3</button>
+        <button [ngClass]="selectedOption === '4' ? 'selected': ''" (click)="onOptionSelect('4')">4</button>
+        <button [ngClass]="selectedOption === '5' ? 'selected': ''" (click)="onOptionSelect('5')">5</button>
     </div>
 </div>

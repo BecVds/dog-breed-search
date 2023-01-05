@@ -10,6 +10,12 @@ import { TraitSearchComponent } from './dog-breed-search/search-card/trait-searc
 import { BackgroundComponent } from './dog-breed-search/background/background.component';
 import { RangeInputComponent } from './dog-breed-search/search-card/trait-search/range-input/range-input.component';
 import { OptionInputComponent } from './dog-breed-search/search-card/trait-search/option-input/option-input.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatRadioModule} from '@angular/material/radio';
+import {MatInputModule} from '@angular/material/input';
+import {MatSliderModule} from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,12 @@ import { OptionInputComponent } from './dog-breed-search/search-card/trait-searc
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatRadioModule,
+    MatInputModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+@import './variables.scss';
+@include mat-core();
+/*
+  NB! Changes to theme should be made in the
+  variables.scss file.
+*/
+
+$theme-primary: mat-palette($theme-primary-color);
+$theme-accent: mat-palette($theme-accent-color);
+$theme-warning: mat-palette($mat-red);
+
+$theme-typography: mat-typography-config(
+  $font-family: $theme-font
+);
+
+$main-light-theme: mat-light-theme((
+  color: (
+    primary: $theme-primary,
+    accent: $theme-accent,
+    warn: $theme-warning,
+  )
+));
+
+@include angular-material-theme($main-light-theme);
+@include angular-material-typography($theme-typography);

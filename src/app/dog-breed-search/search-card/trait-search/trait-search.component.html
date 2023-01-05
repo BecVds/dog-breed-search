@@ -1,9 +1,12 @@
 <div class="trait-search-container">
     <div class="range-inputs">
-        <app-range-input></app-range-input>
+        <app-range-input criteria='Height'></app-range-input>
+        <app-range-input criteria='Weight'></app-range-input>
     </div>
     <div class="options-inputs">
-        <app-option-input></app-option-input>
-        <app-option-input></app-option-input>
+        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Shedding'></app-option-input>
+        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Barking'></app-option-input>
+        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Energy'></app-option-input>
+        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Trainability'></app-option-input>
     </div>
 </div>

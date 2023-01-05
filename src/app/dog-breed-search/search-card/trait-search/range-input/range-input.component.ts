@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-range-input',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./range-input.component.scss']
 })
 export class RangeInputComponent implements OnInit {
+
+  @Input() criteria: string = '';
 
   constructor() { }
 
