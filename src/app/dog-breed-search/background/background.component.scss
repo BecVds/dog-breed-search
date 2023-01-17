@@ -1,5 +1,5 @@
 .background-container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
@@ -10,10 +10,9 @@
         width: 25%;
         position: relative;
         overflow: hidden;
-        img {
-            position: absolute;
-            left: -100px;
-            height: 100%;
-        }
+        background-image: url("../../../assets/backround-images/Dog-1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
     }
 }

@@ -7,7 +7,6 @@
               <mat-radio-button value="name">Breed Name</mat-radio-button>
               <mat-radio-button value="trait">Trait</mat-radio-button>
             </mat-radio-group>
-            <p class="option-description">Search for a dog breed to display information on it.</p>
         </div>
         <app-name-search *ngIf="searchOption === 'name'"></app-name-search>
         <app-trait-search *ngIf="searchOption === 'trait'"></app-trait-search>

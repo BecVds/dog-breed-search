@@ -1,18 +1,20 @@
 <div class="range-input-container">
     <h4 class="input-heading">{{criteria}}</h4>
     <div class="slider-container">
-      <mat-slider min="200" max="500">
-        <input value="300" matSliderStartThumb>
-        <input value="400" matSliderEndThumb>
+      <mat-slider class="slider" min="0" max="100" showTickMarks discrete [displayWith]="formatLabel">
+        <input [(ngModel)]="minValue" matSliderStartThumb>
+        <input [(ngModel)]="maxValue" matSliderEndThumb>
       </mat-slider>
     </div>
     <div class="input-values-container">
         <div class="value-container">
-            <p>Min:<span class="min-value"></span></p>
+            <p class="label">Min:</p>
+            <p class="min-value value">{{minValue}}</p>
         </div>
         <p>To</p>
         <div class="value-container">
-            <p>Max:<span class="min-value"></span></p>
+            <p class="label">Max:</p>
+            <p class="min-value value">{{maxValue}}</p>
         </div>
     </div>
 </div>
