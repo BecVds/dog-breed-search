@@ -1,0 +1,70 @@
+<div class="dog-breed-card-container">
+  <div class="left">
+    <div class="image-container">
+      <img [src]="breed.image_link" alt="dog_image">
+    </div>
+  </div>
+  <div class="right">
+    <div class="top">
+      <h1>{{breed.name}}</h1>
+    </div>
+    <div class="bottom">
+      <div class="information">
+        <h2>Shedding:</h2>
+        <h3>{{breed.shedding}}</h3>
+      </div>
+      <div class="information">
+        <h2>Grooming:</h2>
+        <h3>{{breed.grooming}}</h3>
+      </div>
+      <div class="information">
+        <h2>Drooling:</h2>
+        <h3>{{breed.drooling}}</h3>
+      </div>
+      <div class="information">
+        <h2>Coat length:</h2>
+        <h3>{{breed.coat_length}}</h3>
+      </div>
+      <div class="information">
+        <h2>Playfulness:</h2>
+        <h3>{{breed.playfulness}}</h3>
+      </div>
+      <div class="information">
+        <h2>Protectiveness:</h2>
+        <h3>{{breed.protectiveness}}</h3>
+      </div>
+      <div class="information">
+        <h2>Trainability:</h2>
+        <h3>{{breed.trainability}}</h3>
+      </div>
+      <div class="information">
+        <h2>Energy:</h2>
+        <h3>{{breed.energy}}</h3>
+      </div>
+      <div class="information">
+        <h2>Barking:</h2>
+        <h3>{{breed.barking}}</h3>
+      </div>
+      <div class="information multi">
+        <div class="information">
+          <h2>Maximum Height:</h2>
+          <h3>{{breed.max_height_male}}</h3>
+        </div>
+        <div class="information">
+          <h2>Minimum Height:</h2>
+          <h3>{{breed.min_height_male}}</h3>
+        </div>
+      </div>
+      <div class="information multi">
+        <div class="information">
+          <h2>Maximum Weight:</h2>
+          <h3>{{breed.max_weight_male}}</h3>
+        </div>
+        <div class="information">
+          <h2>Minimum Weight:</h2>
+          <h3>{{breed.min_weight_male}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,8 +6,21 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .input-heading {
-        margin: 0;
+    &.optionNotChecked {
+      // background-color: #949494;
+      .input-heading, p, .option-buttons {
+        opacity: 0.5;
+        button {
+          cursor: default;
+        }
+      }
+    }
+    .top-container {
+      display: flex;
+      justify-content: space-between;
+      .input-heading {
+          margin: 0;
+      }
     }
     p {
         font-size: 12px;
@@ -21,6 +34,7 @@
             width: 25px;
             border-color: transparent;
             border-radius: 50px;
+            cursor: pointer;
         }
         .selected {
             background-color: #72AE1C;

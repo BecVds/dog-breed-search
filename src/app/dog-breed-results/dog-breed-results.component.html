@@ -1,0 +1,16 @@
+<div class="dog-breed-results-container">
+  <div class="header">
+    <h1>Breeds that match your search</h1>
+  </div>
+  <div class="dog-breed-cards-container" *ngIf="dogBreeds.length !== 0">
+    <div class="dog-breed-cards" *ngFor="let dogBreed of dogBreeds">
+      <app-dog-breed-card [breed] = dogBreed></app-dog-breed-card>
+    </div>
+  </div>
+  <div class="no-results" *ngIf="dogBreeds.length === 0">
+    <h1 class="no-results-text">Unfortunately no breeds match your search.
+      Adjust your search options and try again.
+    </h1>
+  </div>
+  <button mat-raised-button color="primary" [routerLink]="'/'">Search Again</button>
+</div>

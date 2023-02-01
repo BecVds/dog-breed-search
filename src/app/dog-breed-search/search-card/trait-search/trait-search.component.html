@@ -1,12 +1,28 @@
 <div class="trait-search-container">
     <div class="range-inputs">
-        <app-range-input criteria='Height'></app-range-input>
-        <app-range-input criteria='Weight'></app-range-input>
+        <app-range-input (onRangeSelection)="valueSelect($event, 'Height')" criteria='Height'></app-range-input>
+        <app-range-input (onRangeSelection)="valueSelect($event, 'Weight')"  criteria='Weight'></app-range-input>
     </div>
     <div class="options-inputs">
-        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Shedding'></app-option-input>
-        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Barking'></app-option-input>
-        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Energy'></app-option-input>
-        <app-option-input (onOptionSelection)="testFunction($event)" criteria='Trainability'></app-option-input>
+        <app-option-input
+          (onOptionSelection)="optionSelect($event, 'Protectiveness')"
+          (onSlideToggleSelection)="optionToggle($event, 'Protectiveness')"
+          criteria='Protectiveness'>
+        </app-option-input>
+        <app-option-input
+          (onOptionSelection)="optionSelect($event, 'Barking')"
+          (onSlideToggleSelection)="optionToggle($event, 'Barking')"
+          criteria='Barking'>
+        </app-option-input>
+        <app-option-input
+          (onOptionSelection)="optionSelect($event, 'Energy')"
+          (onSlideToggleSelection)="optionToggle($event, 'Energy')"
+          criteria='Energy'>
+        </app-option-input>
+        <app-option-input
+          (onOptionSelection)="optionSelect($event, 'Trainability')"
+          (onSlideToggleSelection)="optionToggle($event, 'Trainability')"
+          criteria='Trainability'>
+      </app-option-input>
     </div>
 </div>

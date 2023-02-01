@@ -1,0 +1,68 @@
+.dog-breed-card-container {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+  width: 275px;
+  .left {
+    .image-container {
+      height: 100%;
+      aspect-ratio: 3/2;
+      mask-image: linear-gradient(180deg, rgb(0, 0, 0), transparent 100%);
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  .right {
+    padding: 10px;
+    padding-top: 0;
+    background-color: white;
+    .top {
+      h1 {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+    .bottom {
+      padding-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      .information {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        width: calc(50% - 1.5px);
+        h2 {
+          margin: 0;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        h3 {
+          height: 20px;
+          padding: 6px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #72AE1C;
+          color: white;
+          margin: 0;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      .multi {
+        width: 100%;
+        .information {
+          display: flex;
+          justify-content: space-between;
+          gap: 5px;
+          width: calc(50% - 1.5px);
+        }
+      }
+    }
+  }
+}

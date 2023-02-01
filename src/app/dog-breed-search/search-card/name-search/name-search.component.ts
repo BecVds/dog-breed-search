@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DogBreedSearchService } from 'src/app/services/dog-breed-search.service';
 
 @Component({
   selector: 'app-name-search',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NameSearchComponent implements OnInit {
 
-  constructor() { }
+  breedName: string = '';
+
+  constructor(
+    private readonly dogBreedSearchService: DogBreedSearchService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  captureBreedName() {
+    this.dogBreedSearchService.captureBreedName(this.breedName)
+  }
 }
